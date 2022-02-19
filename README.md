@@ -1,5 +1,5 @@
 # php-apache-grpc-protobuf
-This repository helps developers create a docker container whereby a PHP code can be run to serve requests over apache server
+This repository helps developers create a docker container whereby a PHP code can be run to serve requests over apache server. Much of the configuration is sourced from [Google Doc: Deploy a PHP app in a container image](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-php-service).
 
 ## Steps to Run
 
@@ -8,7 +8,7 @@ This repository helps developers create a docker container whereby a PHP code ca
 
 ## Instructions
 
-The built image is available in [dockerhub.io](https://hub.docker.com/repository/docker/vishwaraj00/php-8.0-apache-grpc-protobuf).
+The built image is available publicly in [dockerhub.io](https://hub.docker.com/repository/docker/vishwaraj00/php-8.0-apache-grpc-protobuf).
 And can be consumed in other `Dockerfile` as follows:
 
 ```
