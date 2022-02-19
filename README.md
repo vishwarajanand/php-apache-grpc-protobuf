@@ -4,6 +4,6 @@ This repository helps developers create a docker container whereby a PHP code ca
 ## Steps to Run
 
 1. `docker build -t vishwaraj00/php-8.0-apache-grpc-protobuf .`
-2. `docker push -t vishwaraj00/php-8.0-apache-grpc-protobuf`
+2. `docker push vishwaraj00/php-8.0-apache-grpc-protobuf`
 
 
