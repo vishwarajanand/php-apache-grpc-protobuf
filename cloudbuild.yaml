@@ -4,7 +4,7 @@
 steps:
 # Build the container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ['build', '-t', 'vishwaraj00/php-8.0-apache-grpc-protobuf', './server']
+  args: ['build', '-t', 'vishwaraj00/php-8.0-apache-grpc-protobuf', '.']
   timeout: 9000s
 
 # Push the container image to Container Registry
