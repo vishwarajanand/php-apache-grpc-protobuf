@@ -12,19 +12,6 @@ steps:
   args: ['push',
           'vishwaraj00/php-8.0-apache-grpc-protobuf']
 
-# Deploy container image to Cloud Run
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: gcloud
-  args: ['run', 'deploy', 'thebookclubserver', '--image', 'vishwaraj00/php-8.0-apache-grpc-protobuf:latest', '--region', 'asia-southeast1', '--port', '8080']
-
-# # Simple sanity check: invoke the new gcloud container to confirm that it was
-# # built correctly.
-# - name: 'gcr.io/$PROJECT_ID/vishwarajanand/the_book_club_app'
-#   args: ['info']
-
-# - name: 'gcr.io/$PROJECT_ID/vishwarajanand/the_book_club_server'
-#   args: ['info']
-
 images:
 - 'vishwaraj00/php-8.0-apache-grpc-protobuf'
 
