@@ -17,5 +17,7 @@ FROM vishwaraj00/php-8.0-apache-grpc-protobuf as build
 
 ## CI/CD
 
-A Google Cloud Build is triggered on `main` branch of this repo, which automatically builds a docker image from `Dockerfile` and pushes to dockerhub for immediate public use typically in about ~30 mins. [Google Cloud Build Trigger Private Link](https://console.cloud.google.com/cloud-build/triggers/edit/cf4c7004-3cf2-46fc-a594-8c21e02a9704?project=968036764985)
+A Google Cloud Build is triggered on `main` branch of this repo, which automatically builds a docker image from `Dockerfile` and pushes to dockerhub for immediate public use typically in about ~30 mins.
+
+[Google Cloud Build Trigger Private Link](https://console.cloud.google.com/cloud-build/triggers/edit/cf4c7004-3cf2-46fc-a594-8c21e02a9704?project=968036764985)
 
