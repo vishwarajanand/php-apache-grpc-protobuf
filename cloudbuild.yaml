@@ -2,6 +2,7 @@
 # $ gcloud builds submit . --config=cloudbuild.yaml
 
 steps:
+
 # Build the container image
 - name: "gcr.io/cloud-builders/docker"
   args: ['build', '-t', 'vishwaraj00/php-8.0-apache-grpc-protobuf', '.']
@@ -9,13 +10,21 @@ steps:
 
 # docker login -u vishwaraj00 -p <REPLACE_PASSWORD> docker.io
 - name: "gcr.io/cloud-builders/docker"
-  args: ['login', '-u', 'vishwaraj00', '-p', '<REPLACE_PASSWORD>', 'docker.io']
-  timeout: 9000s
+  entrypoint: 'bash'
+  args: ['-c', 'docker login --username=$$DOCKER_USERNAME --password=$$DOCKER_PASSWORD', 'docker.io']
+  secretEnv: ['DOCKER_USERNAME', 'DOCKER_PASSWORD']
 
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push',
           'vishwaraj00/php-8.0-apache-grpc-protobuf']
+
+availableSecrets:
+  secretManager:
+  - versionName: projects/968036764985/secrets/DOCKER_USERNAME/versions/1
+    env: 'DOCKER_USERNAME'
+  - versionName: projects/968036764985/secrets/DOCKER_PASSWORD/versions/1
+    env: 'DOCKER_PASSWORD'
 
 images:
 - 'vishwaraj00/php-8.0-apache-grpc-protobuf'
