@@ -29,3 +29,4 @@ A Google Cloud Build is triggered on `main` branch of this repo, which automatic
 
 [Google Cloud Build Trigger Private Link](https://console.cloud.google.com/cloud-build/triggers/edit/cf4c7004-3cf2-46fc-a594-8c21e02a9704?project=968036764985)
 
+![Cloud Trigger Settings](./Cloud-Trigger-Settings.png)
