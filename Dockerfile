@@ -1,10 +1,14 @@
-FROM php:8.0-apache
+FROM php:7.4-apache
 
 RUN docker-php-ext-install -j "$(nproc)" opcache
 
 RUN set -eux \
    && apt-get update \
    && apt-get install -y libzip-dev zlib1g-dev \
+  #  && apt-get install -y lsb-release software-properties-common
+  #  && add-apt-repository "deb http://archive.ubuntu.com/ubuntu " "$(lsb_release -sc)" " universe" \
+  #  && apt-get update \
+  #  && apt-get install -y php7.4-mbstring \
    && docker-php-ext-install zip
 
 RUN pecl install grpc
