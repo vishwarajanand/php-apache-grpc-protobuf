@@ -13,8 +13,8 @@ FROM vishwaraj00/php-8.0-apache-grpc-protobuf as build
 
 ## Steps to Run Locally
 
-1. `docker build -t vishwaraj00/php-8.0-apache-grpc-protobuf .`
-2. `docker push vishwaraj00/php-8.0-apache-grpc-protobuf`
+1. `docker build -t vishwaraj00/php-7.4-apache-grpc-protobuf .`
+2. `docker push vishwaraj00/php-7.4-apache-grpc-protobuf`
 
 
 ## Steps to Run on gCloud
