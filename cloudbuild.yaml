@@ -5,7 +5,7 @@ steps:
 
 # Build the container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ['build', '-t', 'vishwaraj00/php-8.0-apache-grpc-protobuf', '.']
+  args: ['build', '-t', 'vishwaraj00/php-latest-apache-grpc-protobuf', '.']
   timeout: 9000s
 
 # docker login -u vishwaraj00 -p <REPLACE_PASSWORD> docker.io
@@ -17,7 +17,7 @@ steps:
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push',
-          'vishwaraj00/php-8.0-apache-grpc-protobuf']
+          'vishwaraj00/php-latest-apache-grpc-protobuf']
 
 availableSecrets:
   secretManager:
@@ -27,7 +27,7 @@ availableSecrets:
     env: 'DOCKER_PASSWORD'
 
 images:
-- 'vishwaraj00/php-8.0-apache-grpc-protobuf'
+- 'vishwaraj00/php-latest-apache-grpc-protobuf'
 
 timeout: 24000s
 
