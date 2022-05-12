@@ -11,7 +11,7 @@ RUN set -eux \
   #  && apt-get install -y php7.4-mbstring \
    && docker-php-ext-install zip
 
-RUN pecl install grpc
+RUN pecl install grpc-1.44.0
 RUN pecl install protobuf
 
 RUN set -ex; \
