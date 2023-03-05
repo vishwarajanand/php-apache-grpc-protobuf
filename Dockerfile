@@ -7,7 +7,7 @@ RUN set -eux \
    && apt-get install -y libzip-dev zlib1g-dev \
    && docker-php-ext-install zip
 
-RUN pecl install grpc
+RUN pecl install grpc-1.49.0
 RUN pecl install protobuf
 
 RUN set -ex; \
