@@ -41,8 +41,8 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 RUN echo "extension=grpc.so" >> "$PHP_INI_DIR/php.ini"
 RUN echo "extension=protobuf.so" >> "$PHP_INI_DIR/php.ini"
 
-# RUN chmod 644 /var/www/html/.htaccess
-RUN chmod -R 755 /var/www/html/
+RUN docker-php-ext-install bcmath
+
 RUN a2enmod rewrite
 # RUN a2enmod ssl
 # RUN a2ensite default-ssl
