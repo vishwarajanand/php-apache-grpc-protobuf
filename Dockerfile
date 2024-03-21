@@ -12,7 +12,7 @@ RUN set -eux \
    && docker-php-ext-install zip
 
 RUN pecl install grpc
-RUN pecl install protobuf
+RUN pecl install protobuf-3.24.4
 
 RUN set -ex; \
   { \
