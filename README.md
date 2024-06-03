@@ -8,7 +8,7 @@ The built image is available publicly in [dockerhub.io](https://hub.docker.com/r
 And can be consumed in other `Dockerfile` as follows:
 
 ```
-FROM vishwaraj00/php-8.0-apache-grpc-protobuf as build
+FROM vishwaraj00/php-7.4-apache-grpc-protobuf as build
 ```
 
 ## Steps to Run Locally
